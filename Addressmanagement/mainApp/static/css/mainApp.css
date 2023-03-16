@@ -1,5 +1,3 @@
-
-
 @font-face {
     font-family: "Ubuntu";
     src: local("Ubuntu-LightItalic"), url(/static/fonts/Ubuntu-LightItalic.ttf);
@@ -55,7 +53,8 @@
 
 
 .navbar-btn-group {
-    display: block;
+    display: flex;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
 }
@@ -88,7 +87,8 @@ body {
 	background: #eeeeee;
 }
 
-.navbar {		
+.navbar {
+    min-width: 1228px;		
     padding: 0;
 	background: #fff;
 	padding-left: 16px;
