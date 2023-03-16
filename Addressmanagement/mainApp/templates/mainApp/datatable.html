@@ -1,0 +1,61 @@
+{% extends 'mainApp/base.html' %}
+
+{% block content %}
+<div style="width: 100%; height: 40px;">
+    
+</div>
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Id</th>W
+        <th>Organisation</th>
+        <th>Surname</th>
+        <th>Name</th>
+        <th>Title 1</th>
+        <th>Title 2</th>
+        <th>Title 3</th>
+        <th>Birthdate</th>
+        <th>Street</th>
+        <th>Street Number</th>
+        <th>City</th>
+        <th>Zip code</th>
+        <th>Country</th>
+        <th>Nr Plate</th>
+        <th>Mail business</th>
+        <th>Phone business</th>
+        <th>Phone private</th>
+        <th>Kids count</th>
+        <th>Profile Pic</th>
+        <th>Last Edited</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for address in addresses %}
+    <tr>
+        <td>{{ address.id }}</td>
+        <td>{{ address.prv_fir }}</td>
+        <td>{{ address.fam_name }}</td>
+        <td>{{ address.vor_namen }}</td>
+        <td>{{ address.titel_1 }}</td>
+        <td>{{ address.titel_2 }}</td>
+        <td>{{ address.titel_3 }}</td>
+        <td>{{ address.geb_datum }}</td>
+        <td>{{ address.str }}</td>
+        <td>{{ address.str_nr }}</td>
+        <td>{{ address.ort }}</td>
+        <td>{{ address.plz }}</td>
+        <td>{{ address.land }}</td>
+        <td>{{ address.lkz }}</td>
+        <td>{{ address.gesch_mail }}</td>
+        <td>{{ address.gesch_nr }}</td>
+        <td>{{ address.mobil_nr }}</td>
+        <td>{{ address.anz_kinder }}</td>
+        <td>{{ address.portrait }}</td>
+        <td>{{ address.last_edited }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+

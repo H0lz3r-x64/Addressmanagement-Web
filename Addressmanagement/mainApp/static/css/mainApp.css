@@ -1,0 +1,171 @@
+
+
+@font-face {
+    font-family: "Ubuntu";
+    src: local("Ubuntu-LightItalic"), url(/static/fonts/Ubuntu-LightItalic.ttf);
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: local("Ubuntu-Light"), url(/static/fonts/Ubuntu-Light.ttf);
+    font-weight: 300;
+}
+
+
+@font-face {
+    font-family: "Ubuntu";
+    src: local("Ubuntu-Regular"), url(/static/fonts/Ubuntu-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: local("Ubuntu-Italic"), url(/static/fonts/Ubuntu-Italic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: local("Ubuntu-Medium"), url(/static/fonts/Ubuntu-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: local("Ubuntu-MediumItalic"), url(/static/fonts/Ubuntu-MediumItalic.ttf);
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: local("Ubuntu-Bold"), url(/static/fonts/Ubuntu-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: local("Ubuntu-BoldItalic"), url(/static/fonts/Ubuntu-BoldItalic.ttf);
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+.navbar-btn-group {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-btn-default {
+    width: 200px;
+    border-width: 0px;
+    border-bottom-width: 3px;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 10px 0;
+}
+
+.navbar-btn-default:hover {
+    border: 3px 0px 0px 0px;
+    border-color: #0C7DFF;
+}
+
+.navbar-btn-default:focus {
+    border-color: #0C7DFF;
+    outline: 0;
+}
+.navbar-btn-default-i {
+    font-family: "Ubuntu";
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+body {
+	background: #eeeeee;
+}
+
+.navbar {		
+    padding: 0;
+	background: #fff;
+	padding-left: 16px;
+	padding-right: 16px;
+	border-bottom: 1px solid #d6d6d6;
+	box-shadow: 0 0 4px rgba(0,0,0,.1);
+}
+.nav-link img {
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	margin: -8px 0;
+	float: left;
+	margin-right: 10px;
+}
+
+.navbar .navbar-brand {
+	color: #555;
+	padding-left: 0;
+	padding-right: 50px;
+	font-family: "Ubuntu";
+}
+
+
+.navbar .nav-item i {
+	font-size: 18px;
+}
+.navbar .dropdown-item i {
+	font-size: 16px;
+	min-width: 22px;
+}
+.navbar .nav-item.open > a {
+	background: none !important;
+}
+.navbar .dropdown-menu {
+	border-radius: 1px;
+	border-color: #e5e5e5;
+	box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.navbar .dropdown-menu a {
+	color: #777;
+	padding: 8px 20px;
+	line-height: normal;
+}
+.navbar .dropdown-menu a:hover, .navbar .dropdown-menu a:active {
+	color: #333;
+}	
+.navbar .dropdown-item .material-icons {
+	font-size: 21px;
+	line-height: 16px;
+	vertical-align: middle;
+	margin-top: -2px;
+}
+/* .navbar .badge {
+	color: #fff;
+	background: #f44336;
+	font-size: 11px;
+	border-radius: 20px;
+	position: absolute;
+	min-width: 10px;
+	padding: 4px 6px 0;
+	min-height: 18px;
+	top: 5px;
+} */
+/* .navbar a.notifications, .navbar a.messages {
+	position: relative;
+	margin-right: 10px;
+} */
+/* .navbar a.messages {
+	margin-right: 20px;
+}
+.navbar a.notifications .badge {
+	margin-left: -8px;
+}
+.navbar a.messages .badge {
+	margin-left: -4px;
+}	 */
+.navbar .active a, .navbar .active a:hover, .navbar .active a:focus {
+	background: transparent !important;
+}
