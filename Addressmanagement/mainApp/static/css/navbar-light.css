@@ -1,0 +1,119 @@
+.navbar {
+    min-width: 1000px;		
+	min-height: 50px;
+    padding: 0;
+	background: #fff;
+	padding-left: 16px;
+	padding-right: 16px;
+	border-bottom: 1px solid #d6d6d6;
+	box-shadow: 0 0 4px rgba(0,0,0,.1);
+}
+.nav-link img {
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	margin: -8px 0;
+	float: left;
+	margin-right: 10px;
+}
+
+.navbar .navbar-brand {
+	color: #555;
+	padding-left: 0;
+	padding-right: 50px;
+	font-family: "Ubuntu";
+}
+
+
+.navbar .nav-item i {
+	font-size: 18px;
+}
+.navbar .dropdown-item i {
+	font-size: 16px;
+	min-width: 22px;
+}
+.navbar .nav-item.open > a {
+	background: none !important;
+}
+.navbar .dropdown-menu {
+	border-radius: 1px;
+	border-color: #e5e5e5;
+	box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.navbar .dropdown-menu a {
+	color: #777;
+	padding: 8px 20px;
+	line-height: normal;
+}
+.navbar .dropdown-menu a:hover, .navbar .dropdown-menu a:active {
+	color: #333;
+}	
+.navbar .dropdown-item .material-icons {
+	font-size: 21px;
+	line-height: 16px;
+	vertical-align: middle;
+	margin-top: -2px;
+}
+
+/* .navbar .badge {
+	color: #fff;
+	background: #f44336;
+	font-size: 11px;
+	border-radius: 20px;
+	position: absolute;
+	min-width: 10px;
+	padding: 4px 6px 0;
+	min-height: 18px;
+	top: 5px;
+} */
+/* .navbar a.notifications, .navbar a.messages {
+	position: relative;
+	margin-right: 10px;
+} */
+/* .navbar a.messages {
+	margin-right: 20px;
+}
+.navbar a.notifications .badge {
+	margin-left: -8px;
+}
+.navbar a.messages .badge {
+	margin-left: -4px;
+}	 */
+.navbar .active a, .navbar .active a:hover, .navbar .active a:focus {
+	background: transparent !important;
+}
+
+.navbar-btn-group {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-btn-default {
+    width: 200px;
+    border-width: 0px;
+    border-bottom-width: 3px;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 13px 0px;
+}
+
+.navbar-btn-default:hover {
+    border-color: #0C7DFF;
+}
+
+.navbar-btn-default:focus {
+    border-color: #0C7DFF;
+    outline: 0;
+}
+.navbar-btn-default-i {
+    font-family: "Ubuntu";
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.navbar-nav ml-auto {
+	outline: 2px 2px black;
+	border: 2px;
+}

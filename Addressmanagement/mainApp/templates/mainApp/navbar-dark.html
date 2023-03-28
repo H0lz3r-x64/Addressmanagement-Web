@@ -1,0 +1,39 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">Address Management <b>Web</b></a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-btn-group" role="group">
+            <button class="navbar-btn-default" type="button">
+                <p class="navbar-btn-default-i">Dataview</p>
+            </button>
+            <button class="navbar-btn-default" type="button">
+                <p class="navbar-btn-default-i">New</p>
+            </button>
+            <button class="navbar-btn-default" type="button">
+                <p class="navbar-btn-default-i">Admin</p>
+            </button>
+        </div>
+
+        <div class="navbar-nav ml-auto">
+            <!-- <a href="#" class="nav-item nav-link notifications"><i class="fa fa-bell-o"></i><span
+                        class="badge">1</span></a>
+                <a href="#" class="nav-item nav-link messages"><i class="fa fa-envelope-o"></i><span
+                        class="badge">10</span></a></a> -->
+            <div class="nav-item dropdown">
+                <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action">
+                    <img src="{% static 'icons/sebastin-kurz-kurz.gif' %}" alt="avatar"> USER NAME
+                    <b class="caret"> </b>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item"><i class="bi bi-person-circle"></i> Profile</a></a>
+                    <a href="#" class="dropdown-item"><i class="bi bi-calendar-check"></i> Calendar</a></a>
+                    <a href="#" class="dropdown-item"><i class="bi bi-gear"></i> Settings</a></a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item"><i class="bi bi-box-arrow-right"></i> Logout</a></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

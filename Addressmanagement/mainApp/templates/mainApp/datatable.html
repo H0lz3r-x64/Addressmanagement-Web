@@ -2,60 +2,259 @@
 
 {% block content %}
 <div style="width: 100%; height: 40px;">
-    
+
 </div>
 
-<table class="table table-hover">
+<section class="container ">
+    <div class="bg-white border rounded-5">
+
+        <section class="w-100 p-4">
+            <div class="input-group mb-4">
+                <input class="form-control" id="advanced-search-input" placeholder="phrase in:field1,field2"
+                    type="text">
+                <button class="btn btn-primary" id="advanced-search-button" type="button">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+
+            <div class="datatable" id="datatable-advanced-search">
+                <div class="datatable-inner table-responsive" style="overflow: auto; position: relative;">
+
+                    <!-- IF data loaded -->
+                    <table class="table datatable-table">
+                        <!-- headers -->
+                        <thead class="datatable-header">
+                            <tr>
+                                <th scope="col" style="cursor: pointer;"><i class="datatable-sort-icon fas fa-arrow-up"
+                                        data-mdb-sort="name"></i>
+                                    Name
+                                </th>
+                                <th scope="col" style="cursor: pointer;"><i class="datatable-sort-icon fas fa-arrow-up"
+                                        data-mdb-sort="position"></i>
+                                    Position
+                                </th>
+                                <th scope="col" style="cursor: pointer;"><i class="datatable-sort-icon fas fa-arrow-up"
+                                        data-mdb-sort="office"></i>
+                                    Office
+                                </th>
+                                <th scope="col" style="cursor: pointer;"><i class="datatable-sort-icon fas fa-arrow-up"
+                                        data-mdb-sort="age"></i> Age
+                                </th>
+                                <th scope="col" style="cursor: pointer;"><i class="datatable-sort-icon fas fa-arrow-up"
+                                        data-mdb-sort="date"></i>
+                                    Start date
+                                </th>
+                                <th scope="col" style="cursor: pointer;"><i class="datatable-sort-icon fas fa-arrow-up"
+                                        data-mdb-sort="salary"></i>
+                                    Salary
+                                </th>
+                            </tr>
+                        </thead>
+                        <!-- data -->
+                        <tbody class="datatable-body">
+                            <tr data-mdb-index="0" scope="row">
+                                <td class="" data-mdb-field="name" false="" style="">Tiger Nixon</td>
+                                <td class="" data-mdb-field="position" false="" style="">System Architect</td>
+                                <td class="" data-mdb-field="office" false="" style="">Edinburgh</td>
+                                <td class="" data-mdb-field="age" false="" style="">61</td>
+                                <td class="" data-mdb-field="date" false="" style="">2011/04/25</td>
+                                <td class="" data-mdb-field="salary" false="" style="">$320,800</td>
+                            </tr>
+                            <tr data-mdb-index="1" scope="row">
+                                <td class="" data-mdb-field="name" false="" style="">Garrett Winters</td>
+                                <td class="" data-mdb-field="position" false="" style="">Accountant</td>
+                                <td class="" data-mdb-field="office" false="" style="">Tokyo</td>
+                                <td class="" data-mdb-field="age" false="" style="">63</td>
+                                <td class="" data-mdb-field="date" false="" style="">2011/07/25</td>
+                                <td class="" data-mdb-field="salary" false="" style="">$170,750</td>
+                            </tr>
+                            <tr data-mdb-index="2" scope="row">
+                                <td class="" data-mdb-field="name" false="" style="">Ashton Cox</td>
+                                <td class="" data-mdb-field="position" false="" style="">Junior Technical Author</td>
+                                <td class="" data-mdb-field="office" false="" style="">San Francisco</td>
+                                <td class="" data-mdb-field="age" false="" style="">66</td>
+                                <td class="" data-mdb-field="date" false="" style="">2009/01/12</td>
+                                <td class="" data-mdb-field="salary" false="" style="">$86,000</td>
+                            </tr>
+                            <tr data-mdb-index="3" scope="row">
+                                <td class="" data-mdb-field="name" false="" style="">Cedric Kelly</td>
+                                <td class="" data-mdb-field="position" false="" style="">Senior Javascript Developer
+                                </td>
+                                <td class="" data-mdb-field="office" false="" style="">Edinburgh</td>
+                                <td class="" data-mdb-field="age" false="" style="">22</td>
+                                <td class="" data-mdb-field="date" false="" style="">2012/03/29</td>
+                                <td class="" data-mdb-field="salary" false="" style="">$433,060</td>
+                            </tr>
+                            <tr data-mdb-index="4" scope="row">
+                                <td class="" data-mdb-field="name" false="" style="">Airi Satou</td>
+                                <td class="" data-mdb-field="position" false="" style="">Accountant</td>
+                                <td class="" data-mdb-field="office" false="" style="">Tokyo</td>
+                                <td class="" data-mdb-field="age" false="" style="">33</td>
+                                <td class="" data-mdb-field="date" false="" style="">2008/11/28</td>
+                                <td class="" data-mdb-field="salary" false="" style="">$162,700</td>
+                            </tr>
+                            <tr data-mdb-index="5" scope="row">
+                                <td class="" data-mdb-field="name" false="" style="">Brielle Williamson</td>
+                                <td class="" data-mdb-field="position" false="" style="">Integration Specialist</td>
+                                <td class="" data-mdb-field="office" false="" style="">New York</td>
+                                <td class="" data-mdb-field="age" false="" style="">61</td>
+                                <td class="" data-mdb-field="date" false="" style="">2012/12/02</td>
+                                <td class="" data-mdb-field="salary" false="" style="">$372,000</td>
+                            </tr>
+                            <tr data-mdb-index="6" scope="row">
+                                <td class="" data-mdb-field="name" false="" style="">Herrod Chandler</td>
+                                <td class="" data-mdb-field="position" false="" style="">Sales Assistant</td>
+                                <td class="" data-mdb-field="office" false="" style="">San Francisco</td>
+                                <td class="" data-mdb-field="age" false="" style="">59</td>
+                                <td class="" data-mdb-field="date" false="" style="">2012/08/06</td>
+                                <td class="" data-mdb-field="salary" false="" style="">$137,500</td>
+                            </tr>
+                            <tr data-mdb-index="7" scope="row">
+                                <td class="" data-mdb-field="name" false="" style="">Rhona Davidson</td>
+                                <td class="" data-mdb-field="position" false="" style="">Integration Specialist</td>
+                                <td class="" data-mdb-field="office" false="" style="">Tokyo</td>
+                                <td class="" data-mdb-field="age" false="" style="">55</td>
+                                <td class="" data-mdb-field="date" false="" style="">2010/10/14</td>
+                                <td class="" data-mdb-field="salary" false="" style="">$327,900</td>
+                            </tr>
+                            <tr data-mdb-index="8" scope="row">
+                                <td class="" data-mdb-field="name" false="" style="">Colleen Hurst</td>
+                                <td class="" data-mdb-field="position" false="" style="">Javascript Developer</td>
+                                <td class="" data-mdb-field="office" false="" style="">San Francisco</td>
+                                <td class="" data-mdb-field="age" false="" style="">39</td>
+                                <td class="" data-mdb-field="date" false="" style="">2009/09/15</td>
+                                <td style="" class="" data-mdb-field="contact" false=""><button
+                                        class="call-btn btn btn-outline-primary btn-floating btn-sm"
+                                        data-mdb-number="+48000000000" style=""><i
+                                            class="bi bi-pencil-square"></i></button>
+                                    <button class="message-btn btn ms-2 btn-primary btn-floating btn-sm"
+                                        data-mdb-email="tiger.nixon@gmail.com"><i
+                                            class="bi bi-three-dots-vertical"></i></button>
+                                </td>
+                            </tr>
+                            <tr data-mdb-index="9" scope="row">
+                                <td class="" data-mdb-field="name" false="" style="">Sonya Frost</td>
+                                <td class="" data-mdb-field="position" false="" style="">Software Engineer</td>
+                                <td class="" data-mdb-field="office" false="" style="">Edinburgh</td>
+                                <td class="" data-mdb-field="age" false="" style="">23</td>
+                                <td class="" data-mdb-field="date" false="" style="">2008/12/13</td>
+                                <td style="" class="" data-mdb-field="contact" false=""><button
+                                        class="call-btn btn btn-outline-primary btn-floating btn-sm"
+                                        data-mdb-number="+48000000000" style=""><i
+                                            class="bi bi-pencil-square"></i></button>
+                                    <button class="message-btn btn ms-2 btn-primary btn-floating btn-sm"
+                                        data-mdb-email="tiger.nixon@gmail.com"><i
+                                            class="bi bi-three-dots-vertical"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- IF data loaded END -->
+
+                    <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                        <div class="ps__thumb-x" style="left: 0px; width: 0px;" tabindex="0"></div>
+                    </div>
+                    <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                        <div class="ps__thumb-y" style="top: 0px; height: 0px;" tabindex="0"></div>
+                    </div>
+
+                    <!-- IF data not loaded-->
+                    <div class="datatable-loader bg-light}">
+                        <span class="datatable-loader-inner">
+                            <span class="datatable-progress bg-primary"></span></span>
+                    </div>
+
+                    <p class="text-center text-muted my-4">Loading results...</p>
+                    <!-- if data not loaded END-->
+                </div>
+
+                <!-- pagination -->
+                <div class="datatable-pagination">
+                    <div class="datatable-select-wrapper">
+                        <p class="datatable-select-text">Rows per page:</p>
+
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-end">
+                                <!-- if not available "page-item disabled" -->
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true"><i class="bi bi-chevron-left"></i></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span class="sr-only">Next</span>
+                                        <span aria-hidden="true"><i class="bi bi-chevron-right"></i></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="datatable-pagination-nav">
+                        0 of 0
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+
+<!-- <table class="table table-hover">
     <thead>
-    <tr>
-        <th>Id</th>W
-        <th>Organisation</th>
-        <th>Surname</th>
-        <th>Name</th>
-        <th>Title 1</th>
-        <th>Title 2</th>
-        <th>Title 3</th>
-        <th>Birthdate</th>
-        <th>Street</th>
-        <th>Street Number</th>
-        <th>City</th>
-        <th>Zip code</th>
-        <th>Country</th>
-        <th>Nr Plate</th>
-        <th>Mail business</th>
-        <th>Phone business</th>
-        <th>Phone private</th>
-        <th>Kids count</th>
-        <th>Profile Pic</th>
-        <th>Last Edited</th>
-    </tr>
+        <tr>
+            <th>Id</th>
+
+            <th>Organisation</th>
+            <th>Surname</th>
+            <th>Name</th>
+            <th>Title 1</th>
+            <th>Title 2</th>
+            <th>Title 3</th>
+            <th>Birthdate</th>
+            <th>Street</th>
+            <th>Street Number</th>
+            <th>City</th>
+            <th>Zip code</th>
+            <th>Country</th>
+            <th>Nr Plate</th>
+            <th>Mail business</th>
+            <th>Phone business</th>
+            <th>Phone private</th>
+            <th>Kids count</th>
+            <th>Profile Pic</th>
+            <th>Last Edited</th>
+        </tr>
     </thead>
     <tbody>
-    {% for address in addresses %}
-    <tr>
-        <td>{{ address.id }}</td>
-        <td>{{ address.prv_fir }}</td>
-        <td>{{ address.fam_name }}</td>
-        <td>{{ address.vor_namen }}</td>
-        <td>{{ address.titel_1 }}</td>
-        <td>{{ address.titel_2 }}</td>
-        <td>{{ address.titel_3 }}</td>
-        <td>{{ address.geb_datum }}</td>
-        <td>{{ address.str }}</td>
-        <td>{{ address.str_nr }}</td>
-        <td>{{ address.ort }}</td>
-        <td>{{ address.plz }}</td>
-        <td>{{ address.land }}</td>
-        <td>{{ address.lkz }}</td>
-        <td>{{ address.gesch_mail }}</td>
-        <td>{{ address.gesch_nr }}</td>
-        <td>{{ address.mobil_nr }}</td>
-        <td>{{ address.anz_kinder }}</td>
-        <td>{{ address.portrait }}</td>
-        <td>{{ address.last_edited }}</td>
-    </tr>
-    {% endfor %}
+        {% for address in addresses %}
+        <tr>
+            <td>{{ address.id }}</td>
+            <td>{{ address.prv_fir }}</td>
+            <td>{{ address.fam_name }}</td>
+            <td>{{ address.vor_namen }}</td>
+            <td>{{ address.titel_1 }}</td>
+            <td>{{ address.titel_2 }}</td>
+            <td>{{ address.titel_3 }}</td>
+            <td>{{ address.geb_datum }}</td>
+            <td>{{ address.str }}</td>
+            <td>{{ address.str_nr }}</td>
+            <td>{{ address.ort }}</td>
+            <td>{{ address.plz }}</td>
+            <td>{{ address.land }}</td>
+            <td>{{ address.lkz }}</td>
+            <td>{{ address.gesch_mail }}</td>
+            <td>{{ address.gesch_nr }}</td>
+            <td>{{ address.mobil_nr }}</td>
+            <td>{{ address.anz_kinder }}</td>
+            <td>{{ address.portrait }}</td>
+            <td>{{ address.last_edited }}</td>
+        </tr>
+        {% endfor %}
     </tbody>
-</table>
+</table> -->
 {% endblock %}
-

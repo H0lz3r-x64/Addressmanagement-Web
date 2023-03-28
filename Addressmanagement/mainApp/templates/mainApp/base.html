@@ -12,95 +12,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{% static 'fontawesome/css/all.css' %}">
     <link href="{% static 'css/mainApp.css' %}" rel="stylesheet">
+    <link href="{% static 'css/navbar-light.css' %}" rel="stylesheet">
 
 </head>
 
 <body>
-    {% block sidebar %}
-    {% if theme == 'light' %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a href="#" class="navbar-brand">Address Management <b>Web</b></a>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="navbar-btn-group" role="group">
-                <button class="navbar-btn-default" type="button">
-                    <p class="navbar-btn-default-i">Dataview</p>
-                </button>
-                <button class="navbar-btn-default" type="button">
-                    <p class="navbar-btn-default-i">New</p>
-                </button>
-                <button class="navbar-btn-default" type="button">
-                    <p class="navbar-btn-default-i">Admin</p>
-                </button>
-            </div>
-
-            <div class="navbar-nav ml-auto">
-                <!-- <a href="#" class="nav-item nav-link notifications"><i class="fa fa-bell-o"></i><span
-                        class="badge">1</span></a>
-                <a href="#" class="nav-item nav-link messages"><i class="fa fa-envelope-o"></i><span
-                        class="badge">10</span></a></a> -->
-                <div class="nav-item dropdown">
-                    <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action">
-                        <img src="{% static 'icons/sebastin-kurz-kurz.gif' %}" alt="avatar"> USER NAME
-                        <b class="caret"> </b>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item"><i class="bi bi-person-circle"></i> Profile</a></a>
-                        <a href="#" class="dropdown-item"><i class="bi bi-calendar-check"></i> Calendar</a></a>
-                        <a href="#" class="dropdown-item"><i class="bi bi-gear"></i> Settings</a></a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item"><i class="bi bi-box-arrow-right"></i> Logout</a></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-    {% elif theme == 'dark' %}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-            class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
-                        data-toggle="dropdown" href="#" id="navbarDropdown" role="button">
-                        Dropdown
-                    </a>
-                    <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" type="search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
-    {% else %}
+{% if theme == 'light' %}
+    {% include 'mainApp/navbar-light.html' %}
+{% elif theme == 'dark' %}
+    {% include 'mainApp/navbar-dark.html' %}
+{% else %}
     Navbar
-    {% endif %}
-    {% endblock %}
+{% endif %}
 
     <main>
-
-
         <section class="data-area">
             {% block content %}
             {% endblock %}
