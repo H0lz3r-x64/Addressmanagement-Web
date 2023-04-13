@@ -5,9 +5,8 @@
 
 </div>
 
-<section class="container ">
-    <div class="bg-white border rounded-5">
-
+<section class="container-fluid">
+    <div class="bg-white border rounded-1">
         <section class="w-100 p-4">
             <div class="input-group mb-4">
                 <input class="form-control" id="advanced-search-input" placeholder="phrase in:field1,field2"
@@ -16,137 +15,62 @@
                     <i class="bi bi-search"></i>
                 </button>
             </div>
+        </section>
+
+        <section class="">
 
             <div class="datatable" id="datatable-advanced-search">
-                <div class="datatable-inner table-responsive" style="overflow: auto; position: relative;">
+                <div class="datatable-inner table-responsive table-thin" style="overflow: auto; position: relative;">
 
-                    <!-- IF data loaded -->
+                    <!-- If data loaded -->
                     <table class="table datatable-table">
+
                         <!-- headers -->
                         <thead class="datatable-header">
-                            <tr>
-                                <th scope="col" style="cursor: pointer;"><i class="datatable-sort-icon fas fa-arrow-up"
-                                        data-mdb-sort="name"></i>
-                                    Name
-                                </th>
-                                <th scope="col" style="cursor: pointer;"><i class="datatable-sort-icon fas fa-arrow-up"
-                                        data-mdb-sort="position"></i>
-                                    Position
-                                </th>
-                                <th scope="col" style="cursor: pointer;"><i class="datatable-sort-icon fas fa-arrow-up"
-                                        data-mdb-sort="office"></i>
-                                    Office
-                                </th>
-                                <th scope="col" style="cursor: pointer;"><i class="datatable-sort-icon fas fa-arrow-up"
-                                        data-mdb-sort="age"></i> Age
-                                </th>
-                                <th scope="col" style="cursor: pointer;"><i class="datatable-sort-icon fas fa-arrow-up"
-                                        data-mdb-sort="date"></i>
-                                    Start date
-                                </th>
-                                <th scope="col" style="cursor: pointer;"><i class="datatable-sort-icon fas fa-arrow-up"
-                                        data-mdb-sort="salary"></i>
-                                    Salary
-                                </th>
-                            </tr>
+                            <th scope="col">
+                              <div class="form-check d-flex align-items-center mb-0">
+                                <input class="datatable-header-checkbox form-check-input" type="checkbox" >
+                              </div>
+                            </th>
+
+                            <th scope="col">#</th>
+
+                            {% for field, value in data.0.fields.items %}
+                                <th scope="col">{{ field }}</th>
+                            {% endfor %}
+
+                            <th style="" scope="col">Actions</th>
                         </thead>
+
                         <!-- data -->
                         <tbody class="datatable-body">
-                            <tr data-mdb-index="0" scope="row">
-                                <td class="" data-mdb-field="name" false="" style="">Tiger Nixon</td>
-                                <td class="" data-mdb-field="position" false="" style="">System Architect</td>
-                                <td class="" data-mdb-field="office" false="" style="">Edinburgh</td>
-                                <td class="" data-mdb-field="age" false="" style="">61</td>
-                                <td class="" data-mdb-field="date" false="" style="">2011/04/25</td>
-                                <td class="" data-mdb-field="salary" false="" style="">$320,800</td>
-                            </tr>
-                            <tr data-mdb-index="1" scope="row">
-                                <td class="" data-mdb-field="name" false="" style="">Garrett Winters</td>
-                                <td class="" data-mdb-field="position" false="" style="">Accountant</td>
-                                <td class="" data-mdb-field="office" false="" style="">Tokyo</td>
-                                <td class="" data-mdb-field="age" false="" style="">63</td>
-                                <td class="" data-mdb-field="date" false="" style="">2011/07/25</td>
-                                <td class="" data-mdb-field="salary" false="" style="">$170,750</td>
-                            </tr>
-                            <tr data-mdb-index="2" scope="row">
-                                <td class="" data-mdb-field="name" false="" style="">Ashton Cox</td>
-                                <td class="" data-mdb-field="position" false="" style="">Junior Technical Author</td>
-                                <td class="" data-mdb-field="office" false="" style="">San Francisco</td>
-                                <td class="" data-mdb-field="age" false="" style="">66</td>
-                                <td class="" data-mdb-field="date" false="" style="">2009/01/12</td>
-                                <td class="" data-mdb-field="salary" false="" style="">$86,000</td>
-                            </tr>
-                            <tr data-mdb-index="3" scope="row">
-                                <td class="" data-mdb-field="name" false="" style="">Cedric Kelly</td>
-                                <td class="" data-mdb-field="position" false="" style="">Senior Javascript Developer
-                                </td>
-                                <td class="" data-mdb-field="office" false="" style="">Edinburgh</td>
-                                <td class="" data-mdb-field="age" false="" style="">22</td>
-                                <td class="" data-mdb-field="date" false="" style="">2012/03/29</td>
-                                <td class="" data-mdb-field="salary" false="" style="">$433,060</td>
-                            </tr>
-                            <tr data-mdb-index="4" scope="row">
-                                <td class="" data-mdb-field="name" false="" style="">Airi Satou</td>
-                                <td class="" data-mdb-field="position" false="" style="">Accountant</td>
-                                <td class="" data-mdb-field="office" false="" style="">Tokyo</td>
-                                <td class="" data-mdb-field="age" false="" style="">33</td>
-                                <td class="" data-mdb-field="date" false="" style="">2008/11/28</td>
-                                <td class="" data-mdb-field="salary" false="" style="">$162,700</td>
-                            </tr>
-                            <tr data-mdb-index="5" scope="row">
-                                <td class="" data-mdb-field="name" false="" style="">Brielle Williamson</td>
-                                <td class="" data-mdb-field="position" false="" style="">Integration Specialist</td>
-                                <td class="" data-mdb-field="office" false="" style="">New York</td>
-                                <td class="" data-mdb-field="age" false="" style="">61</td>
-                                <td class="" data-mdb-field="date" false="" style="">2012/12/02</td>
-                                <td class="" data-mdb-field="salary" false="" style="">$372,000</td>
-                            </tr>
-                            <tr data-mdb-index="6" scope="row">
-                                <td class="" data-mdb-field="name" false="" style="">Herrod Chandler</td>
-                                <td class="" data-mdb-field="position" false="" style="">Sales Assistant</td>
-                                <td class="" data-mdb-field="office" false="" style="">San Francisco</td>
-                                <td class="" data-mdb-field="age" false="" style="">59</td>
-                                <td class="" data-mdb-field="date" false="" style="">2012/08/06</td>
-                                <td class="" data-mdb-field="salary" false="" style="">$137,500</td>
-                            </tr>
-                            <tr data-mdb-index="7" scope="row">
-                                <td class="" data-mdb-field="name" false="" style="">Rhona Davidson</td>
-                                <td class="" data-mdb-field="position" false="" style="">Integration Specialist</td>
-                                <td class="" data-mdb-field="office" false="" style="">Tokyo</td>
-                                <td class="" data-mdb-field="age" false="" style="">55</td>
-                                <td class="" data-mdb-field="date" false="" style="">2010/10/14</td>
-                                <td class="" data-mdb-field="salary" false="" style="">$327,900</td>
-                            </tr>
-                            <tr data-mdb-index="8" scope="row">
-                                <td class="" data-mdb-field="name" false="" style="">Colleen Hurst</td>
-                                <td class="" data-mdb-field="position" false="" style="">Javascript Developer</td>
-                                <td class="" data-mdb-field="office" false="" style="">San Francisco</td>
-                                <td class="" data-mdb-field="age" false="" style="">39</td>
-                                <td class="" data-mdb-field="date" false="" style="">2009/09/15</td>
-                                <td style="" class="" data-mdb-field="contact" false=""><button
-                                        class="call-btn btn btn-outline-primary btn-floating btn-sm"
-                                        data-mdb-number="+48000000000" style=""><i
-                                            class="bi bi-pencil-square"></i></button>
-                                    <button class="message-btn btn ms-2 btn-primary btn-floating btn-sm"
-                                        data-mdb-email="tiger.nixon@gmail.com"><i
-                                            class="bi bi-three-dots-vertical"></i></button>
-                                </td>
-                            </tr>
-                            <tr data-mdb-index="9" scope="row">
-                                <td class="" data-mdb-field="name" false="" style="">Sonya Frost</td>
-                                <td class="" data-mdb-field="position" false="" style="">Software Engineer</td>
-                                <td class="" data-mdb-field="office" false="" style="">Edinburgh</td>
-                                <td class="" data-mdb-field="age" false="" style="">23</td>
-                                <td class="" data-mdb-field="date" false="" style="">2008/12/13</td>
-                                <td style="" class="" data-mdb-field="contact" false=""><button
-                                        class="call-btn btn btn-outline-primary btn-floating btn-sm"
-                                        data-mdb-number="+48000000000" style=""><i
-                                            class="bi bi-pencil-square"></i></button>
-                                    <button class="message-btn btn ms-2 btn-primary btn-floating btn-sm"
-                                        data-mdb-email="tiger.nixon@gmail.com"><i
-                                            class="bi bi-three-dots-vertical"></i></button>
-                                </td>
-                            </tr>
+                            {% for instance in data %}
+                                <tr scope="row" style="white-space: nowrap;">
+                                    <td>
+                                      <div class="form-check">
+                                        <input data-mdb-row-index="0" class="datatable-row-checkbox form-check-input" type="checkbox">
+                                      </div>
+                                    </td>
+
+                                    <td class="" style="">{{ forloop.counter0 }}</td>
+
+                                    {% for field, value in instance.fields.items %}
+                                    <td class="">{{ value }}</td>
+                                    {% endfor %}
+
+                                    <td style="" class="">
+                                        <button role="button" class="call-btn btn btn-outline-primary btn-floating btn-sm" id="edit-entry-button">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                        <button role="button" class="call-btn btn btn-outline-primary btn-floating btn-sm" id="delete-entry-button">
+                                            <i class="bi bi-trash3-fill"></i>
+                                        </button>
+                                        <button role="button" class="message-btn btn ms-2 btn-primary btn-floating btn-sm" id="three-dots-entry-button">
+                                            <i class="bi bi-three-dots-vertical"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                     <!-- IF data loaded END -->
@@ -159,7 +83,7 @@
                     </div>
 
                     <!-- IF data not loaded-->
-                    <div class="datatable-loader bg-light}">
+                    <div class="datatable-loader bg-light">
                         <span class="datatable-loader-inner">
                             <span class="datatable-progress bg-primary"></span></span>
                     </div>
@@ -204,57 +128,5 @@
     </div>
 </section>
 
-<!-- <table class="table table-hover">
-    <thead>
-        <tr>
-            <th>Id</th>
 
-            <th>Organisation</th>
-            <th>Surname</th>
-            <th>Name</th>
-            <th>Title 1</th>
-            <th>Title 2</th>
-            <th>Title 3</th>
-            <th>Birthdate</th>
-            <th>Street</th>
-            <th>Street Number</th>
-            <th>City</th>
-            <th>Zip code</th>
-            <th>Country</th>
-            <th>Nr Plate</th>
-            <th>Mail business</th>
-            <th>Phone business</th>
-            <th>Phone private</th>
-            <th>Kids count</th>
-            <th>Profile Pic</th>
-            <th>Last Edited</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for address in addresses %}
-        <tr>
-            <td>{{ address.id }}</td>
-            <td>{{ address.prv_fir }}</td>
-            <td>{{ address.fam_name }}</td>
-            <td>{{ address.vor_namen }}</td>
-            <td>{{ address.titel_1 }}</td>
-            <td>{{ address.titel_2 }}</td>
-            <td>{{ address.titel_3 }}</td>
-            <td>{{ address.geb_datum }}</td>
-            <td>{{ address.str }}</td>
-            <td>{{ address.str_nr }}</td>
-            <td>{{ address.ort }}</td>
-            <td>{{ address.plz }}</td>
-            <td>{{ address.land }}</td>
-            <td>{{ address.lkz }}</td>
-            <td>{{ address.gesch_mail }}</td>
-            <td>{{ address.gesch_nr }}</td>
-            <td>{{ address.mobil_nr }}</td>
-            <td>{{ address.anz_kinder }}</td>
-            <td>{{ address.portrait }}</td>
-            <td>{{ address.last_edited }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table> -->
-{% endblock %}
+{% endblock %}  

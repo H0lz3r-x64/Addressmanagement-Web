@@ -1,8 +1,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.core import serializers
+from django.template import loader
 
 # Create your views here.
-from django.template import loader
 
 from .models import Addresses
 
@@ -10,5 +11,6 @@ from .models import Addresses
 def base(request):
     theme = 'light'
     addresses = Addresses.objects.filter().order_by('id')
-    return render(request, 'mainApp/datatable.html', {'addresses': addresses, 'theme': theme})
+    data = serializers.serialize("python", Addresses.objects.all())
+    return render(request, 'mainApp/datatable.html', {'addresses': addresses, 'theme': theme, 'data': data})
 
