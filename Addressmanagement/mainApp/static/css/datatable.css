@@ -45,7 +45,7 @@
 }
 
 .datatable-header {
-  background-color: #d0e1ff;
+  background-color: #E6F2FF;
 }
 
 th {
@@ -55,37 +55,3 @@ th {
 tr {
 	max-width: 50px;
 }
-
-
-/* 
-.table-responsive {
-  display: block;
-  width: 100%;
-  overflow-x: auto;
-}
-.table-thin table {
-  border-spacing: 0;
-  margin-bottom: 0px;
-}
-.table-thin table tbody tr td {
-  padding-top: 0;
-  font-size: 12px;
-  height: 30px;
-}
-.table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 1px;
-}
-.table-thin td, .table-thin th {
- border: 1px solid;
- white-space: nowrap;
- width: 0;
-}
-
-.table-thin td:first-child {
- max-width: 0;
- overflow: hidden;
- white-space: nowrap;
- text-overflow: ellipsis;  
-} */
