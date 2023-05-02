@@ -6,7 +6,7 @@
 </div>
 
 <section class="container-fluid">
-    <div class="bg-white border rounded-1">
+    <div class="bg-white border rounded-1" style="min-height: 80vh;">
         <section class="w-100 p-4">
             <div class="input-group mb-4">
                 <input class="form-control" id="advanced-search-input" placeholder="phrase in:field1,field2"
@@ -17,8 +17,7 @@
             </div>
         </section>
 
-        <section class="">
-
+        <section>
             <div class="datatable" id="datatable-advanced-search">
                 <div class="datatable-inner table-responsive table-thin" style="overflow: auto; position: relative;">
 
@@ -28,48 +27,57 @@
                         <!-- headers -->
                         <thead class="datatable-header">
                             <th scope="col">
-                              <div class="form-check d-flex align-items-center mb-0">
-                                <input class="datatable-header-checkbox form-check-input" type="checkbox" >
-                              </div>
+                                <div class="form-check d-flex align-items-center mb-0">
+                                    <input class="datatable-header-checkbox form-check-input" type="checkbox">
+                                </div>
                             </th>
 
                             <th scope="col">#</th>
 
                             {% for field, value in data.0.fields.items %}
-                                <th scope="col">{{ field }}</th>
+                            <th scope="col">{{ field }}</th>
                             {% endfor %}
 
-                            <th style="" scope="col">Actions</th>
+                            <th scope="col">Actions</th>
                         </thead>
 
                         <!-- data -->
                         <tbody class="datatable-body">
                             {% for instance in data %}
-                                <tr scope="row" style="white-space: nowrap;">
-                                    <td>
-                                      <div class="form-check">
-                                        <input data-mdb-row-index="0" class="datatable-row-checkbox form-check-input" type="checkbox">
-                                      </div>
-                                    </td>
+                            <tr scope="row" style="white-space: nowrap;">
+                                <td>
+                                    <div class="form-check">
+                                        <input data-mdb-row-index="0" class="datatable-row-checkbox form-check-input"
+                                            type="checkbox">
+                                    </div>
+                                </td>
 
-                                    <td class="" style="">{{ forloop.counter0 }}</td>
+                                <td>{{ forloop.counter0 }}</td>
 
-                                    {% for field, value in instance.fields.items %}
-                                    <td class="">{{ value }}</td>
-                                    {% endfor %}
+                                {% for field, value in instance.fields.items %}
+                                <td>{{ value }}</td>
+                                {% endfor %}
 
-                                    <td style="" class="">
-                                        <button role="button" class="call-btn btn btn-outline-primary btn-floating btn-sm" id="edit-entry-button">
-                                            <i class="bi bi-pencil-square"></i>
-                                        </button>
-                                        <button role="button" class="call-btn btn btn-outline-primary btn-floating btn-sm" id="delete-entry-button">
-                                            <i class="bi bi-trash3-fill"></i>
-                                        </button>
-                                        <button role="button" class="background-color: transparent; " id="three-dots-entry-button">
+                                <td>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-secondary dropdown bg-transparent border-0"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="bi bi-three-dots-vertical" style="color: #7E90A5;"></i>
                                         </button>
-                                    </td>
-                                </tr>
+                                        <div class="dropdown-menu">
+                                            <!-- Dropdown menu links -->
+                                            <h6 class="dropdown-header">Options</h6>
+                                            <a class="dropdown-item" href="#"><i class="bi bi-pencil-square"></i>
+                                                Edit</a>
+                                            <a class="dropdown-item" href="#">Update</a>
+                                            <a class="dropdown-item" href="#">Copy</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item disabled text-danger" href="#"><i
+                                                    class="bi bi-trash3-fill"></i> Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
                             {% endfor %}
                         </tbody>
                     </table>
@@ -91,9 +99,12 @@
                     <p class="text-center text-muted my-4">Loading results...</p>
                     <!-- if data not loaded END-->
                 </div>
+            </div>
+        </section>
 
-                <!-- pagination -->
-                <div class="datatable-pagination">
+        <section>
+            <!-- pagination -->
+                <div class="datatable-pagination" >
                     <div class="datatable-select-wrapper">
                         <p class="datatable-select-text">Rows per page:</p>
 
@@ -123,10 +134,9 @@
                         0 of 0
                     </div>
                 </div>
-            </div>
         </section>
     </div>
 </section>
 
 
-{% endblock %}  
+{% endblock %}

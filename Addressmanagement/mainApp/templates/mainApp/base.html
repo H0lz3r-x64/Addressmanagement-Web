@@ -7,144 +7,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Address Management Tool</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Bootstrap style -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
     <link href="{% static 'css/mainApp.css' %}" rel="stylesheet">
     <link href="{% static 'css/datatable.css' %}" rel="stylesheet">
     <link href="{% static 'css/navbar-light.css' %}" rel="stylesheet">
-
-    <!-- JQuery links  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
 </head>
 
 <body>
-    <div class="row">
-        <div class="col p-0">
-            {% if theme == 'light' %}
-            {% include 'mainApp/navbar-light.html' %}
-            {% elif theme == 'dark' %}
-            {% include 'mainApp/navbar-dark.html' %}
-            {% else %}
-            Navbar
-            {% endif %}
-        </div>
-    </div>
+    <noscript class="noscript">
+        <u
+            style="text-decoration: solid underline white 4px; text-decoration-skip-ink:none; margin-bottom: 35vh; margin-left: auto; margin-right: auto; font-size: xx-large;">
+            You need to enable JavaScript to run this app
+        </u>
+    </noscript>
+    {% if theme == 'light' %}
+    {% include 'mainApp/navbar-light.html' %}
+    {% elif theme == 'dark' %}
+    {% include 'mainApp/navbar-dark.html' %}
+    {% else %}
+    Navbar
+    {% endif %}
+
 
     <div class="container-fluid">
-        <div class="row">
-            <!--main content area-->
-            <main id="main-content" class="col-12 p-0 bg-white">
-                <section class="data-area">
-                    {% block content %}
-                    {% endblock %}
-                </section>
-
+        <div style="width: 100%; height: 40px;"></div>
+        <div class="row justify-content-start">
+            <div class="p-0" id="main-content">
+                <main>
+                    <section class="data-area">
+                        {% block content %}
+                        {% endblock %}
+                    </section>
+                </main>
                 <a href="#" class="btn btn-success" id="menu-toggle1">Toggle1</a>
-            </main>
-        </div>
-        <div class="col-0" id="sidebar">
-            <!--left collapsible nav bar-->
-            <div id="sidebar-nav">
-                <form>
-                    <div>
-                        <div class="mb-3">
-                            <p>Header</p>
-                        </div>
-                        <div class="mb-3">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="id" class="form-label">ID</label>
-                                    <input type="number" class="form-control" id="id" name="id">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="prv_fir" class="form-label">PRV_FIR</label>
-                                    <input type="text" class="form-control" id="prv_fir" name="prv_fir" maxlength="6">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="fam_name" class="form-label">FAM_NAME</label>
-                                    <input type="text" class="form-control" id="fam_name" name="fam_name"
-                                        maxlength="40">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="vor_namen" class="form-label">VOR_NAMEN</label>
-                                    <input type="text" class="form-control" id="vor_namen" name="vor_namen"
-                                        maxlength="40">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="titel_1" class="form-label">TITEL_1</label>
-                                    <input type="text" class="form-control" id="titel_1" name="titel_1" maxlength="10">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="titel_2" class="form-label">TITEL_2</label>
-                                    <input type="text" class="form-control" id="titel_2" name="titel_2" maxlength="10">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="titel_3" class="form-label">TITEL_3</label>
-                                    <input type="text" class="form-control" id="titel_3" name="titel_3" maxlength="10">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="geb_datum" class="form-label">GEB_DATUM</label>
-                                    <input type="text" class="form-control" id="geb_datum" name="geb_datum"
-                                        maxlength="10">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="str" class="form-label">STR</label>
-                                    <input type="text" class="form-control" id="str" name="str" maxlength="40">
-                                </div>
-                                <!-- Add more input fields for the rest of the columns -->
-                            </form>
-                        </div>
+
+            </div>
+            <div class="p-0" id="sidebar">
+                <div class="accordion-body">
+                    <div class="d-flex flex-column flex-shrink-0 p-3 bg-light border rounded-1">
+                        <a href="/"
+                            class="d-flex align-items-center mb-3 mb-md-0 md-md-auto link-dark text-decoration-none">
+                            <span class="fs-4">Sidebar</span>
+                        </a>
+                        <hr>
+                        <form>
+                            <div class="mb-3">
+                                <label for="id" class="form-label">ID</label>
+                                <input type="number" class="form-control" id="id" name="id">
+                            </div>
+                            <div class="mb-3">
+                                <label for="prv_fir" class="form-label">PRV_FIR</label>
+                                <input type="text" class="form-control" id="prv_fir" name="prv_fir" maxlength="6">
+                            </div>
+                            <div class="mb-3">
+                                <label for="fam_name" class="form-label">FAM_NAME</label>
+                                <input type="text" class="form-control" id="fam_name" name="fam_name" maxlength="40">
+                            </div>
+                            <div class="mb-3">
+                                <label for="vor_namen" class="form-label">VOR_NAMEN</label>
+                                <input type="text" class="form-control" id="vor_namen" name="vor_namen" maxlength="40">
+                            </div>
+                            <div class="mb-3">
+                                <label for="titel_1" class="form-label">TITEL_1</label>
+                                <input type="text" class="form-control" id="titel_1" name="titel_1" maxlength="10">
+                            </div>
+                            <div class="mb-3">
+                                <label for="titel_2" class="form-label">TITEL_2</label>
+                                <input type="text" class="form-control" id="titel_2" name="titel_2" maxlength="10">
+                            </div>
+                            <div class="mb-3">
+                                <label for="titel_3" class="form-label">TITEL_3</label>
+                                <input type="text" class="form-control" id="titel_3" name="titel_3" maxlength="10">
+                            </div>
+                            <div class="mb-3">
+                                <label for="geb_datum" class="form-label">GEB_DATUM</label>
+                                <input type="text" class="form-control" id="geb_datum" name="geb_datum" maxlength="10">
+                            </div>
+                            <div class="mb-3">
+                                <label for="str" class="form-label">STR</label>
+                                <input type="text" class="form-control" id="str" name="str" maxlength="40">
+                            </div>
+                            <!-- Add more input fields for the rest of the columns -->
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
 
+
     <style>
-        html,
-        body {
-            height: 100%;
+        #main-content {
+            transition: width 0.35s ease;
         }
 
         #sidebar {
-            max-width: 250px;
-            transition: all 0.2s;
-            padding: 5px;
-            align-items: stretch;
-            margin-left: -200px;
             width: 0px;
-            padding: 0px;
-            font-size: 12px;
-            min-width: 0px;
+            height: 100vh;
+            position: fixed;
+            right: 0;
+            overflow-x: hidden;
+            transition: 0.35s ease;
         }
 
-        #sidebar.active {
-            width: 250px;
-            margin-left: 0px;
+        body {
+            overflow: hidden;
         }
     </style>
 
 
 
-    <script>
+    <!-- JQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
+    <!-- Bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <script>
+        var visibleSidebar = true;
         //global response object all pages return - declare ahead of scripts
         $(document).ready(function () {
             $('#menu-toggle1').on('click', function () {
-                $('#sidebar').toggleClass('active');
+                console.log(visibleSidebar);
+                toggleSidebar();
             });
-
         });
 
+        // Get the main content and sidebar elements
+        var mainContent = document.getElementById("main-content");
+        var sidebar = document.getElementById("sidebar")
 
+        function toggleSidebar() {
+            if (sidebar.style.width == "0px") {
+                console.log("show")
+                sidebar.style.width = "350px";
+                mainContent.style.width = "calc(100% - 350px)";
+            }
+            else {
+                console.log("hide")
+                sidebar.style.width = "0px";
+                mainContent.style.width = "100%";
+            }
+        }
     </script>
-
 </body>
 
 </html>
